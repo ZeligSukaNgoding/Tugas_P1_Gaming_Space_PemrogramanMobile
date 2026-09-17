@@ -1,0 +1,130 @@
+* {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #080510;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #wrap {
+        position: relative;
+        width: min(100vw, 430px);
+        height: min(100vh, 760px);
+        aspect-ratio: 430/760;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #080510;
+        border-radius: 8px;
+        box-shadow: 0 0 35px #ffb30055;
+      }
+      #hud {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 12px;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        font-weight: bold;
+        text-shadow: 0 2px 4px #000;
+      }
+      #pause {
+        position: absolute;
+        right: 12px;
+        top: 42px;
+        width: 42px;
+        height: 38px;
+        border: 1px solid #fff8;
+        background: #1118;
+        color: white;
+        border-radius: 7px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      #overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0009;
+        text-align: center;
+      }
+      .panel {
+        width: 82%;
+        padding: 26px 20px;
+        border: 1px solid #ffd54f88;
+        border-radius: 16px;
+        background: linear-gradient(#180e25ee, #080510ee);
+        box-shadow: 0 0 35px #ff4d0044;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 34px;
+        color: #ffd54f;
+      }
+      p {
+        line-height: 1.5;
+        color: #ddd;
+      }
+      button.play {
+        padding: 12px 28px;
+        border: 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #ff5a00, #ffd000);
+        color: #160700;
+        font-size: 17px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none !important;
+      }
+      #touch {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .touchbtn {
+        position: absolute;
+        bottom: 18px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 1px solid #ffffff44;
+        background: #ffffff12;
+        color: #fff;
+        font-size: 25px;
+        pointer-events: auto;
+        user-select: none;
+      }
+      #left {
+        left: 18px;
+      }
+      #right {
+        left: 94px;
+      }
+      #fire {
+        right: 18px;
+        width: 80px;
+        height: 80px;
+        background: #ff6a001c;
+        border-color: #ffb30066;
+      }
+      @media (min-width: 700px) {
+        #touch {
+          display: none;
+        }
+      }
